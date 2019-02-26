@@ -38,8 +38,7 @@ import org.threeten.bp.OffsetDateTime;
 
   @SerializedName("id")
   private String id = null;
-  
-  private String spaceId;
+ 
 
   @SerializedName("content_metadata_id")
   private Long contentMetadataId = null;
