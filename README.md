@@ -16,7 +16,9 @@ For use in a local development environment, the following command would be used 
 
 `gradle install`
 
+Note: Tested with JDK 8, known issues with newer versions as previously core packages (annotations api, etc) have been moved into separate modules and build process under newer environments appears to break.
+
 # Notes
 2/22/2019 Invalid type declarations have been discovered in the swagger configuration, which in turn results in the failure of some API calls. We have confirmed this with the vendor and have made changes accordingly to the related model classes to resolve this. This means that there is a slight difference between the source code in this project and the contents of what would be produced if you were to generate the entire project again.
 
-We intend to supply a patch to the vendor and have the fix in a futre release. 
+We intend to supply a patch to the vendor and have the fix in a future release. 

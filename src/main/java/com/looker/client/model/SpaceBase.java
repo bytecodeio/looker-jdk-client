@@ -88,6 +88,12 @@ import java.util.Map;
   public String getId() {
     return id;
   }
+  
+  @Schema(description = "Unique Id")
+  public void setId(String id) {
+    this.id = id;
+  }
+  
   /**
   * Id of content metadata
   * @return contentMetadataId

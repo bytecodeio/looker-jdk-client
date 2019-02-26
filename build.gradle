@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'com.looker'
-version = '1.0.0'
+version = '3.0.0'
 
 buildscript {
     repositories {
@@ -91,6 +91,15 @@ if(hasProperty('target') && target == 'android') {
     task execute(type:JavaExec) {
        main = System.getProperty('mainClass')
        classpath = sourceSets.main.runtimeClasspath
+    }
+    
+    task sourcesJar(type: Jar) {
+        from sourceSets.main.java.srcDirs
+        classifier = 'sources'
+    }
+
+    artifacts {
+        archives sourcesJar
     }
 }
 
